@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const insurance_cost=2.99
+
+        let shippingCost=9.99
+        let isOrderValid=true
+
+        let userAge= 67
+        let points=400
+        let cartValue= 199
+        let hasPromoCode= false
+        let hasParentesApproval= false
+        let addInsurance= true
+
+
+        if ((userAge > 65) || (userAge>=18 && (hasPromoCode || cartValue > 300 || points>500)) ) {
+            shippingCost=0
+            console.log(shippingCost);
+        } else if(userAge <18 && hasParentesApproval){
+            shippingCost=shippingCost-5
+        } else if(userAge <18){
+            isOrderValid=false
+        }
+
+        if (isOrderValid && addInsurance && !hasPromoCode) {
+            shippingCost = shippingCost + insurance_cost
+        }
+        if(isOrderValid){
+            console.log(shippingCost);
+        }else{
+            console.log("No puedes ordenar porque eres menor de edad");
+        }
+
+    </script>
+</body>
+</html>
