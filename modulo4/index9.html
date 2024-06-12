@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let gate=prompt("Elegir la puerta a,b o c")
+        let win=false
+
+        switch (gate) {
+            case "a":
+                alert("Puerta A: vacia")
+                break;
+            case "b":
+                alert("Puerta B: vacia")
+                win=true
+                break;
+            case "c":
+                alert("Puerta C: vacia")
+                break;
+            default:
+                alert("No existe la puerta")
+                break;
+        }
+        if (win) {
+            alert("Gnador")
+        }
+    </script>
+</body>
+</html>
